@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <p class="h4 text-center titulo" >Entidad</p>
+  </div>
+  <div class="conteiner">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-striped fondito">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="numero">
+        <th mat-header-cell *matHeaderCellDef class="fondito"> Número  </th>
+        <td mat-cell *matCellDef="let element "> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+        <td mat-cell *matCellDef="let element"> {{element.desc}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="abreviacion">
+        <th mat-header-cell *matHeaderCellDef> Abreviación </th>
+        <td mat-cell *matCellDef="let element"> {{element.abrev}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="tipo">
+        <th mat-header-cell *matHeaderCellDef> Tipo de lenguaje </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoLeng}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="table-primary"></tr>
+    </table>
+  </div>
+</body>
+</html>
