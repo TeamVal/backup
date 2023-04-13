@@ -1,15 +1,8 @@
-table{
+table {
+  border: black 10px solid;
+}
+tr {
+  background: rgb(155, 148, 209);
 
-  text-align: center;
-  width: 20%;
-  margin-left: 0%;
-  margin-right: 30%;
 }
 
-
-
-
-
-.div-1{
-  text-align: center;
-}
